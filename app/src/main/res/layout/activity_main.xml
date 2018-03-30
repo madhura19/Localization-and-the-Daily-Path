@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context="com.example.madhura.location.MainActivity">
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="Latitude"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_marginStart="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:gravity="center"
+        android:text="Longitude"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_below="@+id/latitude"
+        android:layout_alignStart="@+id/latitude" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:id="@+id/address"
+        android:gravity="left"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/longitude"
+        android:layout_alignStart="@+id/longitude" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter location name"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_marginTop="15dp"
+        android:id="@+id/enterLoc"
+        android:layout_below="@+id/address"
+        android:layout_alignStart="@+id/address" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check In"
+        android:id="@+id/button_address"
+        android:layout_marginBottom="20dp"
+        android:gravity="left"
+        android:onClick="addData"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/enterLoc" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button_address"
+        android:layout_below="@+id/enterLoc"
+        android:id="@+id/checkIn_list"></ListView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Map"
+        android:id="@+id/view_map"
+        android:gravity="right"
+        android:layout_alignBaseline="@+id/button_address"
+        android:layout_alignBottom="@+id/button_address"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="22dp" />
+
+    <Button
+        android:id="@+id/addCN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkIn_list"
+        android:layout_alignStart="@+id/view_map"
+        android:text="Add" />
+
+</RelativeLayout>
